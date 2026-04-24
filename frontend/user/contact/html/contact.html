@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <nav>
+
+            <div class="logo-text">
+                <a href="../../home/html/index.html" class="logo">Trend<span style="color: #ff6b00">Mart</span> </a>
+            </div>
+
+            <ul class="menu-list">
+
+                <li><a href="../../home/html/index.html" class="menu-links">Home</a></li>
+                <li><a href="../../about/html/about.html" class="menu-links">About</a></li>
+                <li><a href="../../shop/html/shop.html" class="menu-links">Shop</a></li>
+                <li><a href="../../contact/html/contact.html" class="menu-links">Contact</a></li>
+
+            </ul>
+
+
+            <div class="icons">
+
+                <div class="icon-wrapper" id="myorders-icon">
+                    <a href="../../myorders/html/myorders.html"><i class="fa-solid fa-box"></i></a>
+                </div>
+
+                <div class="icon-wrapper" id="wish-icon">
+                    <a href="../../wishlist/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                    <span class="cart-count">3</span>
+                </div>
+
+                <div class="icon-wrapper" id="cart-icon">
+                    <a href="../../cart/html/shoppingCart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+
+
+                <div class="icon-wrapper" id="profile-icon">
+                    <a href="../../login/html/login.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+
+                <div class="icon-wrapper" id="logout-icon">
+                    <a href="#" onclick="handleLogout()"><i class="fa-solid fa-power-off"
+                            style="color: #ff4d4d;"></i></a>
+                </div>
+
+            </div>
+
+            <button class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contact-hero-single">
+            <div class="neat-container">
+                <div class="content-side">
+                    <span class="category-tag">Customer Support</span>
+                    <h1>Your Shopping, <br><b>Our Responsibility.</b></h1>
+                    <p>From placing your first order to tracking your delivery, our team is here to ensure a smooth
+                        experience for all our products.</p>
+
+                    <div class="action-box">
+                        <a href="#contact" class="main-btn">Get in Touch</a>
+                        <span class="support-text">Available 9AM - 6PM</span>
+                    </div>
+                </div>
+
+                <div class="image-side">
+                    <div class="image-wrapper-single">
+                        <img src="https://i.pinimg.com/1200x/89/8b/d2/898bd28442abd29eea89e1499ae351fa.jpg"
+                            alt="E-commerce Experience">
+                    </div>
+                    <div class="bg-circle-decoration"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-information section-content">
+            <div class="contact-container">
+                <div class="contact-details">
+                    <h6 class="text">contact information</h6>
+                    <h2 class="main-title"><span>Contact</span> & Join Together</h2>
+                    <p class="sub-text">We'd love to hear from you! Whether you have a question or just want to say
+                        hello, contact us anytime and we'll be happy to connect with you.</p>
+                </div>
+
+                <div class="contact-network">
+                    <div class="location">
+                        <div class="location-details">
+                            <i class="fa fa-map-marker"></i>
+                            <h4 class="sub-title">Location</h4>
+                            <h3 class="head">Visit Us At</h3>
+                            <p class="note">65th street, Anna Nagar.</p>
+                            <p class="note">5th street, Madurai.</p>
+                        </div>
+
+                        <div class="call-details">
+                            <i class="fa-solid fa-phone"></i>
+                            <h4 class="sub-title">24*7 Service</h4>
+                            <h3 class="head">Call Us On</h3>
+                            <p class="note">Tel : +91 82485 20144</p>
+                            <p class="note">Mob: +91 82485 20146</p>
+                        </div>
+
+                        <div class="call-details">
+                            <i class="fa fa-envelope"></i>
+                            <h4 class="sub-title">Drop A Line</h4>
+                            <h3 class="head">Mail Address</h3>
+                            <p class="note">trendmart@gmail.com</p>
+                            <p class="note">shoptrendmart@gmail.com</p>
+                        </div>
+
+                        <div class="call-details">
+                            <i class="fa-solid fa-clock"></i>
+                            <h4 class="sub-title">Office Hours</h4>
+                            <h3 class="head">Opening Time</h3>
+                            <p class="note">Mon - Fri : 9am - 6pm</p>
+                            <p class="note">Sunday (closed)</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section section-content" id="contact">
+
+            <header class="contact-header">
+                <h6 class="text">Contact Us</h6>
+                <h2 class="main-title"><span>Reach </span>& Get In Touch With Us!</h2>
+            </header>
+            <div class="contact-form-container">
+
+                <div class="contact-form-details">
+                    <img src="../images/person-img.jpg" alt="Contact representative" class="contact-image">
+                </div>
+
+
+
+                <div class="contact-all">
+
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="sr-only">Your Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Mail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Enter your message here...</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Enter your message here..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="send-message">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter section-content">
+            <div class="newsletter">
+                <h1 class="text">Sign up to Newsletter</h1>
+
+                <h2>And receive ₹500 coupon for your first shopping</h2>
+                <div class="mail">
+                    <input type="email" placeholder="Enter your email" class="news-box" id="userEmail">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Footer Main Content -->
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>TREND-MART</h3>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-phone"></i> +91 82485 20144</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope"></i> supportTrendMart@gmail.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-location-dot"></i> Madurai - 625106</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-box">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="/frontend/user/about/html/about.html">About Us</a></li>
+                    <li><a href="../../contact/html/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- My Account -->
+            <div class="footer-box">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="../../login/html/login.html">Sign In</a></li>
+                    <li><a href="../../wishlist/html/wishlist.html">My Wishlist</a></li>
+                    <li><a href="../../myorders/html/myorders.html">Track My Order</a></li>
+
+                </ul>
+            </div>
+
+            <!-- contact -->
+
+                <div class="footer-box">
+                    <h3 class="social-media-title">Connect</h3>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-square-instagram social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube social-icon-list"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p id="para">© 2026 Trent-Mart. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <script>
+        const menuBar = document.querySelector(".menu-bar");
+        const menuList = document.querySelector("nav ul");
+
+        menuBar.addEventListener("click", () => {
+            menuList.classList.toggle("showmenu");
+        });
+
+    </script>
+
+    <script src="../js/contact.js"></script>
+    <script src="../../login/js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribers</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./subscribers.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-store"></i>
+            </div>
+
+            <ul class="menu">
+                <li class="active" title="Dashboard">
+                    <a href="../dashboard/dashboard.html"><i class="fa-solid fa-gauge"></i></a>
+                </li>
+                <li title="Products">
+                    <a href="../products/products.html"><i class="fa-solid fa-box"></i></a>
+                </li>
+                <li title="Orders">
+                    <a href="../orders/orders.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li title="Contacts">
+                    <a href="../contacts/contacts.html"><i class="fa-solid fa-users"></i></a>
+                </li>
+                <li title="Subscribers">
+                    <a href="../subscribers/subscribers.html"><i class="fa-solid fa-bell"></i></a>
+                </li>
+            </ul>
+        </aside>
+
+
+        <div class="main">
+
+            <h2>Newsletter Subscribers</h2>
+
+            <div class="container">
+
+                <table class="subscriber-table">
+
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subscribed Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="subscriberTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-wrapper">
+                <div id="pagination"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./subscribers.js"></script>
+</body>
+
+</html>

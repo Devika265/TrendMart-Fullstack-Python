@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo"><i class="fa-solid fa-store"></i></div>
+            <ul class="menu">
+                <li class="active" title="Dashboard"><a href="./dashboard.html"><i class="fa-solid fa-gauge"></i></a>
+                </li>
+                <li title="Products"><a href="../products/products.html"><i class="fa-solid fa-box"></i></a></li>
+                <li title="Orders"><a href="../orders/orders.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li title="Contacts"><a href="../contacts/contacts.html"><i class="fa-solid fa-users"></i></a></li>
+                <li title="Subscribers"><a href="../subscribers/subscribers.html"><i class="fa-solid fa-bell"></i></a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="main">
+            <header class="topbar">
+                <h2>Admin Dashboard</h2>
+                <div class="admin-logout">
+                    <a href="javascript:void(0);" onclick="handleAdminLogout()" class="logout-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    </a>
+                </div>
+            </header>
+
+            <section class="stats">
+                <div class="stat-card purple">
+                    <i class="fa-solid fa-box"></i>
+                    <div>
+                        <h3 id="totalProducts">0</h3>
+                        <p>Total Products</p>
+                    </div>
+                </div>
+                <div class="stat-card blue">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div>
+                        <h3 id="totalOrders">0</h3>
+                        <p>Total Orders</p>
+                    </div>
+                </div>
+                <div class="stat-card red">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <h3 id="totalUsers">0</h3>
+                        <p>Total Users</p>
+                    </div>
+                </div>
+                <div class="stat-card orange">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <div>
+                        <h3 id="totalSales">₹0</h3>
+                        <p>Total Sales</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="box">
+                    <h3>Sales Overview</h3>
+                    <div class="metrics">
+                        <div>
+                            <h4 id="monthSales">₹0</h4>
+                            <p>This Month Sales</p>
+                        </div>
+                        <div>
+                            <h4 id="monthOrders">0</h4>
+                            <p>Orders This Month</p>
+                        </div>
+                    </div>
+                    <canvas id="salesChart"></canvas>
+                </div>
+
+                <div class="box">
+                    <h3>Recent Orders</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentOrdersTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content" style="margin-top: 25px;">
+                <div class="box">
+                    <h3>Order Distribution</h3>
+                    <div style="height: 250px;">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>Top 3 Products Performance</h3>
+                    <div style="height: 250px;">
+                        <canvas id="productsChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="./logout.js"></script>
+</body>
+
+</html>

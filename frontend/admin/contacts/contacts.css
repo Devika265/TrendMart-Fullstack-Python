@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+}
+
+
+.app{
+    display:flex;
+    min-height:100vh;
+}
+
+
+.sidebar{
+    width:70px;
+    background:#0f172a;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:20px;
+}
+
+/* MENU */
+.menu{
+    list-style:none;
+    background: #0f172a;
+}
+
+.menu li{
+    width:50%;
+    padding: 16px;
+    text-align:center;
+    margin:15px 0;
+}
+
+.menu li a{
+    color:white;
+    font-size:15px;
+    padding:16px 16px;
+    transition:0.3s;
+}
+
+.menu li a:hover{
+    background:rgba(255,255,255,0.1);
+    border-radius:8px;
+}
+
+.menu li.active a{
+    background:rgba(255, 255, 255, 0.1);
+    border-radius:8px;
+}
+
+
+.main{
+    flex:1;
+    padding:20px;
+}
+
+
+.topbar{
+    background:white;
+    padding:15px 20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.topbar h2{
+    color:#1e293b;
+}
+
+
+.contact-container{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    overflow-x:auto;
+}
+
+
+.contact-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+
+.contact-table thead{
+    background:#1d2270;
+    color:white;
+}
+
+.contact-table th{
+    padding:12px;
+    text-align:left;
+    font-size:14px;
+}
+
+
+.contact-table td{
+    padding:12px;
+    border-bottom:1px solid #e2e8f0;
+    font-size:14px;
+    color:#334155;
+}
+
+
+.contact-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+
+.pagination-wrapper{
+    display:flex;
+    justify-content:center;
+    margin:20px 0;
+}
+
+#pagination{
+    display:flex;
+    gap:8px;
+}
+
+#pagination button{
+    border:none;
+    padding:8px 14px;
+    background:#e2e8f0;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#pagination button:hover{
+    background:#2563eb;
+    color:white;
+}
+
+#pagination button.active{
+    background:#2563eb;
+    color:white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+
+    .sidebar{
+        width:60px;
+    }
+
+    .menu li a{
+        font-size:18px;
+    }
+
+    .topbar h2{
+        font-size:18px;
+    }
+
+    .contact-table th,
+    .contact-table td{
+        font-size:12px;
+        padding:8px;
+    }
+}

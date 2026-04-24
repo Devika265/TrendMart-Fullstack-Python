@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Method</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/checkout2.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+
+    <nav>
+
+      <div class="logo-text">
+        <a href="../../home/html/index.html" class="logo">Trend<span style="color: #ff6b00">Mart</span> </a>
+      </div>
+
+      <ul class="menu-list">
+
+        <li><a href="../../home/html/index.html" class="menu-links">Home</a></li>
+        <li><a href="../../about/html/about.html" class="menu-links">About</a></li>
+        <li><a href="../../shop/html/shop.html" class="menu-links">Shop</a></li>
+        <li><a href="../../contact/html/contact.html" class="menu-links">Contact</a></li>
+
+      </ul>
+
+      <div class="icons">
+
+        <div class="icon-wrapper" id="myorders-icon">
+          <a href="../../myorders/html/myorders.html"><i class="fa-solid fa-box"></i></a>
+        </div>
+
+        <div class="icon-wrapper" id="wish-icon">
+          <a href="../../wishlist/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+          <span class="cart-count">3</span>
+        </div>
+
+        <div class="icon-wrapper" id="cart-icon">
+          <a href="../../cart/html/shoppingCart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">3</span>
+          </a>
+        </div>
+
+
+        <div class="icon-wrapper" id="profile-icon">
+          <a href="../../login/html/login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <div class="icon-wrapper" id="logout-icon">
+          <a href="#" onclick="handleLogout()"><i class="fa-solid fa-power-off" style="color: #ff4d4d;"></i></a>
+        </div>
+
+      </div>
+
+      <button class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+
+    </nav>
+
+  </header>
+
+  <div class="payment">
+
+    <div class="payment-container">
+
+      <div class="payment-box">
+
+        <h3>Payment Method</h3>
+
+        <div class="payment-card">
+          <div class="payment-header">
+            <input type="radio" checked>
+            <span>Cash on Delivery</span>
+          </div>
+
+          <p class="payment-desc">
+            Pay with cash when your order is delivered.
+          </p>
+
+          <div class="delivery-note">
+            🚚 Estimated Delivery: 3 - 5 Days
+          </div>
+        </div>
+
+        <button class="place-order-btn" onclick="placeOrder()" id="placeOrderBtn">
+          Place Order
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const menuBar = document.querySelector(".menu-bar");
+    const menuList = document.querySelector("nav ul");
+
+    menuBar.addEventListener("click", () => {
+      menuList.classList.toggle("showmenu");
+    });
+
+  </script>
+
+  <script src="../js/checkout2.js"></script>
+  <script src="../../login/js/login.js"></script>
+
+</body>
+
+</html>

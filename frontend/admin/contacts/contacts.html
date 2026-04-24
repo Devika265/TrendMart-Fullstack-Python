@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="./contacts.css">
+</head>
+
+<body>
+
+<div class="app">
+
+        <ul class="menu">
+            <li class="active" title="Dashboard">
+                <a href="../dashboard/dashboard.html"><i class="fa-solid fa-gauge"></i></a>
+            </li>
+            <li title="Products">
+                <a href="../products/products.html"><i class="fa-solid fa-box"></i></a>
+            </li>
+            <li title="Orders">
+                <a href="../orders/orders.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li title="Contacts">
+                <a href="../contacts/contacts.html"><i class="fa-solid fa-users"></i></a>
+            </li>
+            <li title="Subscribers">
+                <a href="../subscribers/subscribers.html"><i class="fa-solid fa-bell"></i></a> 
+            </li>
+        </ul>
+    </aside>
+
+        <div class="main">
+
+            <header class="topbar">
+                <h2>Contacts</h2>
+            </header>
+
+
+            <!-- Main Content -->
+            <main class="main">
+
+
+                <div class="contact-container">
+
+                    <table class="contact-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contactTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+
+        </div>
+
+        <div class="pagination-wrapper">
+    <div id="pagination"></div>
+</div>
+
+        <script src="./contacts.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+[
+    {
+        "image":"1.jpg",
+        "name":"Bag"
+    },
+    {
+        "image":"3.jpg",
+        "name":"Laptop"
+    },
+    {
+        "image":"4.jpg",
+        "name":"Shirt"
+    },
+    {
+        "image":"5.jpg",
+        "name":"Perfume"
+    },
+    {
+        "image":"6.jpg",
+        "name":"Watch"
+    }
+]

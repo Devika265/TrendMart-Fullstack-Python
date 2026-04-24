@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Skin Cream",
+        "category": "Cosmetics",
+        "offer": "35% offer",
+        "price": 228.85,
+        "oldPrice": 299,
+        "rating": 5,
+        "image":"makeup-kits.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Shoe",
+        "category": "Cloths",
+        "offer": "20% offer",
+        "price": 699,
+        "oldPrice": 800,
+        "rating": 4,
+        "image": "shoe.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Chocolate",
+        "category": "Kids Things",
+        "offer": "10% offer",
+        "price": 299.50,
+        "oldPrice": 350,
+        "rating": 4,
+        "image": "chocolate.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Hoodies",
+        "category": "Cloths",
+        "offer": "50% offer",
+        "price": 1050,
+        "oldPrice": 1650,
+        "rating": 4,
+        "image": "hoodies.png"
+    },
+    {
+        "id": 5,
+        "name": "Laptop",
+        "category": "Electronic Devices",
+        "offer": "35% offer",
+        "price": 39999,
+        "oldPrice":42000,
+        "rating": 4,
+        "image": "laptop.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Dove-soap",
+        "category": "Cosmatics",
+        "offer": "5% offer",
+        "price":258.85,
+        "oldPrice":299,
+        "rating": 4,
+        "image": "dove-soap.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Jeans",
+        "category": "Cloths",
+        "offer": "25% offer",
+        "price":2000,
+        "oldPrice":2500,
+        "rating": 4,
+        "image": "jeans.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Marker",
+        "category": "Kids Things",
+        "offer": "10% offer",
+        "price":99,
+        "oldPrice":199,
+        "rating": 4,
+        "image": "marker.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Makeup-kits",
+        "category": "Cosmatics",
+        "offer": "20% offer",
+        "price":545,
+        "oldPrice":749,
+        "rating": 4,
+        "image": "makeup-kits.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Cookware",
+        "category": "Home Applainces",
+        "offer": "20% offer",
+        "price":3000,
+        "oldPrice":3750,
+        "rating": 4,
+        "image": "cookware-sets.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Watch",
+        "category": "Electronic Devices",
+        "offer": "30% offer",
+        "price":699,
+        "oldPrice":899,
+        "rating": 4,
+        "image": "smart-watch.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Umberlla",
+        "category": "Home Applainces",
+        "offer": "15% offer",
+        "price":350,
+        "oldPrice":390,
+        "rating": 4,
+        "image":"umberlla.jpg"
+    }
+]

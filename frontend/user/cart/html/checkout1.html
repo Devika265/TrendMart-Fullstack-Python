@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/checkout1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Checkout Payment</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+
+    <nav>
+
+      <div class="logo-text">
+        <a href="../../home/html/index.html" class="logo">Trend<span style="color: #ff6b00">Mart</span> </a>
+      </div>
+
+      <ul class="menu-list">
+
+        <li><a href="../../home/html/index.html" class="menu-links">Home</a></li>
+        <li><a href="../../about/html/about.html" class="menu-links">About</a></li>
+        <li><a href="../../shop/html/shop.html" class="menu-links">Shop</a></li>
+        <li><a href="../../contact/html/contact.html" class="menu-links">Contact</a></li>
+
+      </ul>
+
+
+      <div class="icons">
+
+        <div class="icon-wrapper" id="myorders-icon">
+          <a href="../../myorders/html/myorders.html"><i class="fa-solid fa-box"></i></a>
+        </div>
+
+        <div class="icon-wrapper" id="wish-icon">
+          <a href="../../wishlist/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+          <span class="cart-count">3</span>
+        </div>
+
+        <div class="icon-wrapper" id="cart-icon">
+          <a href="../../cart/html/shoppingCart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">3</span>
+          </a>
+        </div>
+
+
+        <div class="icon-wrapper" id="profile-icon">
+          <a href="../../login/html/login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <div class="icon-wrapper" id="logout-icon">
+          <a href="#" onclick="handleLogout()"><i class="fa-solid fa-power-off" style="color: #ff4d4d;"></i></a>
+        </div>
+
+      </div>
+
+      <button class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+
+    </nav>
+
+  </header>
+
+  <section class="checkout-one">
+    <div class="checkout-container">
+
+      <h2>Delivery Address</h2>
+
+      <div class="checkout-wrapper">
+
+        <!-- Address Form -->
+        <div class="address-box">
+
+          <form id="addressForm">
+
+            <div class="input-group">
+              <label>Full Name</label>
+              <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" required>
+            </div>
+
+            <div class="input-group">
+              <label>Address</label>
+              <textarea id="address" required></textarea>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label>City</label>
+                <input type="text" id="city" required>
+              </div>
+
+              <div class="input-group">
+                <label>Pincode</label>
+                <input type="text" id="pincode" required>
+              </div>
+            </div>
+
+            <button type="button" class="continue-btn" onclick="saveAddress()">
+              Continue to Payment →
+            </button>
+
+          </form>
+
+        </div>
+
+        <div class="summary-box">
+
+          <h3>Order Summary</h3>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summarySubtotal">₹0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>VAT (5%)</span>
+            <span id="summaryVat">₹0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span id="summaryDelivery">₹0</span>
+          </div>
+
+          <hr>
+
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="summaryTotal">₹0</span>
+          </div>
+
+        </div>
+  </section>
+
+  <script>
+    const menuBar = document.querySelector(".menu-bar");
+    const menuList = document.querySelector("nav ul");
+
+    menuBar.addEventListener("click", () => {
+      menuList.classList.toggle("showmenu");
+    });
+
+  </script>
+
+  <script src="../js/checkout1.js"></script>
+  <script src="../../login/js/login.js"></script>
+</body>
+
+</html>

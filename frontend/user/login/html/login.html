@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>Welcome back!</h3>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" placeholder="Enter your email" id="email">
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" placeholder="Enter your password" id="password">
+                    <i class="far fa-eye toggle-password" id="togglePasswordIcon"></i>
+                </div>
+                <small class="error" id="passwordError"></small>
+            </div>
+
+            <div class="forgot-pwd">
+                <a href="../../login/html/forgot.html">Forgot Password?</a>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="signin-btn">Sign In</button>
+            </div>
+        </form>
+
+        <p class="signup-text">
+            Don’t have an account? <a href="signup.html">Sign Up</a>
+        </p>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

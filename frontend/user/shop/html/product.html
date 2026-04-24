@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/product.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <nav>
+
+            <div class="logo-text">
+                <a href="../../home/html/index.html" class="logo">Trend<span style="color: #ff6b00">Mart</span> </a>
+            </div>
+
+            <ul class="menu-list">
+
+                <li><a href="../../home/html/index.html" class="menu-links">Home</a></li>
+                <li><a href="../../about/html/about.html" class="menu-links">About</a></li>
+                <li><a href="../../shop/html/shop.html" class="menu-links">Shop</a></li>
+                <li><a href="../../contact/html/contact.html" class="menu-links">Contact</a></li>
+
+            </ul>
+
+
+            <div class="icons">
+
+                <div class="icon-wrapper" id="myorders-icon">
+                    <a href="../../myorders/html/myorders.html"><i class="fa-solid fa-box"></i></a>
+                </div>
+
+                <div class="icon-wrapper" id="wish-icon">
+                    <a href="../../wishlist/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                    <span class="cart-count"></span>
+                </div>
+
+                <div class="icon-wrapper" id="cart-icon">
+                    <a href="../../cart/html/shoppingCart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count"></span>
+                    </a>
+                </div>
+
+
+                <div class="icon-wrapper" id="profile-icon">
+                    <a href="../../login/html/login.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+
+                <div class="icon-wrapper" id="logout-icon">
+                    <a href="#" onclick="handleLogout()"><i class="fa-solid fa-power-off"
+                            style="color: #ff4d4d;"></i></a>
+                </div>
+
+            </div>
+
+            <button class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+        </nav>
+
+    </header>
+
+    <main class="product-page-layout">
+
+        <div class="container-split">
+
+            <section class="product-details-column">
+
+                <div class="product-image-box">
+                    <img id="productImage" src="" alt="">
+
+                </div>
+
+                <div class="content-box">
+
+                    <span class="product-category" id="productCategory"></span>
+
+                    <h2 class="product-name" id="productName"></h2>
+
+                    <div class="rating" id="productRating"></div>
+
+                    <p class="product-text" id="productDescription"></p>
+
+                    <div class="price">
+
+                        <span class="offer-price" id="offerPrice"></span>
+                        <span class="original-price" id="originalPrice"></span>
+                    </div>
+
+                    <div class="action-area">
+                        <div class="buttons">
+                            <button id="addToWishlistBtn" class="buynow">Add to Wish List</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REVIEWS -->
+            <aside class="reviews-column">
+                <h3 class="section-title">Customer Feedback</h3>
+                <div class="reviews-list" id="reviewsList">
+                </div>
+
+                <button id="toggleFormBtn" class="write-review-btn">
+                    <i class="fa-solid fa-pen"></i> Write a Review
+                </button>
+            </aside>
+
+            <div id="feedbackModal" class="modal-overlay">
+                <div class="feedback-form-modal">
+                    <h4 class="form-title">Your Review</h4>
+                    <button id="closeModal" class="close-modal">&times;</button>
+                    <form id="feedbackForm">
+                        <div class="input-group">
+                            <input type="text" id="reviewerName" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <select id="reviewRating" required>
+                                <option value="5">⭐⭐⭐⭐⭐</option>
+                                <option value="4">⭐⭐⭐⭐</option>
+                                <option value="3">⭐⭐⭐</option>
+                                <option value="2">⭐⭐</option>
+                                <option value="1">⭐</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="reviewerMessage" rows="4" placeholder="Write your message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-review-btn">Post Feedback</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Related Products -->
+
+    <section class="related-section section-content">
+        <h2 class="title">Related Products</h2>
+
+        <div class="product-list">
+            <div class="products-items" id="relatedProductContainer"></div>
+        </div>
+    </section>
+
+
+    <!-- footer section -->
+
+    <footer class="footer">
+
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter section-content">
+            <div class="newsletter">
+                <h1 class="text">Sign up to Newsletter</h1>
+
+                <h2>And receive ₹500 coupon for your first shopping</h2>
+                <div class="mail">
+                    <input type="email" placeholder="Enter your email" class="news-box" id="userEmail">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Footer Main Content -->
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>TREND-MART</h3>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-phone"></i> +91 82485 20144</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope"></i> supportTrendMart@gmail.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-location-dot"></i> Madurai - 625106</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-box">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="/frontend/user/about/html/about.html">About Us</a></li>
+                    <li><a href="../../contact/html/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- My Account -->
+            <div class="footer-box">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="../../login/html/login.html">Sign In</a></li>
+                    <li><a href="../../wishlist/html/wishlist.html">My Wishlist</a></li>
+                    <li><a href="../../myorders/html/myorders.html">Track My Order</a></li>
+
+                </ul>
+            </div>
+
+            <!-- contact -->
+
+                <div class="footer-box">
+                    <h3 class="social-media-title">Connect</h3>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-square-instagram social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube social-icon-list"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p id="para">© 2026 Trent-Mart. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="../js/product.js"></script>
+    <script src="../../login/js/login.js"></script>
+
+    <script>
+        const menuBar = document.querySelector(".menu-bar");
+        const menuList = document.querySelector("nav ul");
+
+        menuBar.addEventListener("click", () => {
+            menuList.classList.toggle("showmenu");
+        });
+
+    </script>
+
+</body>
+
+</html>

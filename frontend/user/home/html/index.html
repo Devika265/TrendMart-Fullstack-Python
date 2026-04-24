@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>TrendMart</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+
+    <nav>
+
+      <div class="logo-text">
+        <a href="../../home/html/index.html" class="logo">Trend<span style="color: #ff6b00">Mart</span> </a>
+      </div>
+
+      <ul class="menu-list">
+
+        <li><a href="../../home/html/index.html" class="menu-links">Home</a></li>
+        <li><a href="../../about/html/about.html" class="menu-links">About</a></li>
+        <li><a href="../../shop/html/shop.html" class="menu-links">Shop</a></li>
+        <li><a href="../../contact/html/contact.html" class="menu-links">Contact</a></li>
+
+      </ul>
+
+      <div class="icons">
+
+        <div class="icon-wrapper" id="myorders-icon">
+          <a href="../../myorders/html/myorders.html"><i class="fa-solid fa-box"></i></a>
+        </div>
+
+        <div class="icon-wrapper" id="wish-icon">
+          <a href="../../wishlist/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+          <span class="cart-count"></span>
+        </div>
+
+        <div class="icon-wrapper" id="cart-icon">
+          <a href="../../cart/html/shoppingCart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count"></span>
+          </a>
+        </div>
+
+        <div class="icon-wrapper" id="profile-icon">
+          <a href="../../login/html/login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <div class="icon-wrapper" id="logout-icon">
+          <a href="#" onclick="handleLogout()"><i class="fa-solid fa-power-off" style="color: #ff4d4d;"></i></a>
+        </div>
+
+
+      </div>
+
+      <button class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+
+    </nav>
+
+  </header>
+
+  <!-- Hero-section -->
+
+  <section class="hero-banner">
+
+    <div class="banner-slider">
+
+      <div class="slide active">
+        <img src="../images/cosmetic1.png" alt="">
+      </div>
+
+      <div class="slide">
+        <img src="../images/dress.png" alt="">
+      </div>
+
+      <div class="slide">
+        <img src="../images/wa.png" alt="">
+      </div>
+
+      <!-- arrows -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+    </div>
+
+    <!-- dots -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </section>
+
+
+  <!-- Popular Categories section -->
+
+
+  <section class="categories-section section-content">
+
+    <h2 class="title">
+      Popular <span style="color:#ff6b00;">Categories</span>
+    </h2>
+
+    <div class="category-container" id="categoryContainer">
+
+    </div>
+
+  </section>
+
+<!-- offer section -->
+
+<section class="offer-section section-content">
+  <h2 class="title">
+      Trending <span style="color:#ff6b00;">Offers</span>
+    </h2>
+
+  <div class="offer-container" id="offerContainer" style="--bg-gradient: linear-gradient(135deg, #001f3f, #003366); --accent: #ff6b00;">
+    <div class="offer-content">
+      <span class="tag">Limited Time Offer</span>
+      <h1 id="offerTitle">Combo Fashion Deal</h1>
+      <p id="offerDescription">Refresh your wardrobe with our exclusive fashion combos. Get stylish outfits at special bundle prices.</p>
+
+      <div class="countdown">
+        <div class="time-box">
+          <span id="days">06</span>
+          <p>Days</p>
+        </div>
+        <div class="time-box">
+          <span id="hours">12</span>
+          <p>Hours</p>
+        </div>
+        <div class="time-box">
+          <span id="minutes">54</span>
+          <p>Mins</p>
+        </div>
+        <div class="time-box">
+          <span id="seconds">53</span>
+          <p>Secs</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-image">
+      <img id="offerImage" src="YOUR_IMAGE_URL" alt="Offer Image">
+    </div>
+  </div>
+</section>
+
+
+  <!-- explore products -->
+
+  <section class="shop-container section-content">
+
+    <div class="shop-header">
+      <h2 class="title">Explore <span style="color:#ff6b00;">Products</span></h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="product-grid slider-track" id="exploreProductsContainer">
+      </div>
+    </div>
+
+  </section>
+
+
+    <!-- footer section -->
+
+    <footer class="footer">
+
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter section-content">
+            <div class="newsletter">
+                <h1 class="text" style="color:rgb(71, 71, 71)">Sign up to Newsletter</h1>
+
+                <h2>And receive ₹500 coupon for your first shopping</h2>
+                <div class="mail">
+                    <input type="email" placeholder="Enter your email" class="news-box" id="userEmail">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+
+            </div>
+        </div>
+
+
+                <!-- Footer Main Content -->
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3 class="unique">TREND-MART</h3>
+                <ul>
+                    <li>
+                        <p class="inform"><i class="fa fa-phone"></i> +91 82485 20144</p>
+                    </li>
+                    <li>
+                        <p class="inform"><i class="fa fa-envelope"></i> supportTrendMart@gmail.com</p>
+                    </li>
+                    <li>
+                        <p class="inform"><i class="fa fa-location-dot"></i> Madurai - 625106</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-box">
+                <h3 class="unique">Information</h3>
+                <ul>
+                    <li><a href="/frontend/user/about/html/about.html">About Us</a></li>
+                    <li><a href="../../contact/html/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- My Account -->
+            <div class="footer-box">
+                <h3 class="unique">My Account</h3>
+                <ul>
+                    <li><a href="../../login/html/login.html">Sign In</a></li>
+                    <li><a href="../../wishlist/html/wishlist.html">My Wishlist</a></li>
+                    <li><a href="../../myorders/html/myorders.html">Track My Order</a></li>
+
+                </ul>
+            </div>
+
+            <!-- contact -->
+
+                <div class="footer-box">
+                    <h3 class="unique">Connect</h3>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-square-instagram social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube social-icon-list"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p id="para">© 2026 Trent-Mart. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+  <script src="../js/productsCategories.js"></script>
+  <script src="../js/exploreProducts.js"></script>
+  <script src="../js/hero.js"></script>
+  <script src="../js/offer.js"></script>
+  <script src="../../login/js/login.js"></script>
+
+  <script>
+    const menuBar = document.querySelector(".menu-bar");
+    const menuList = document.querySelector("nav ul");
+
+    menuBar.addEventListener("click", () => {
+      menuList.classList.toggle("showmenu");
+    });
+
+  </script>
+
+</body>
+
+</html>

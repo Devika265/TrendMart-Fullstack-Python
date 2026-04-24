@@ -1,0 +1,372 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+    /* colors */
+    --white-color:#fff;
+    --dark-color:#252525;
+    --primary-color: #07023b;
+    --yellow-color: #FACC15;
+    --orange-color:#fa6902;
+    --mint-green-color: #2DD4BF;
+    --medium-grey-color:#ccc;
+
+/* Font size */
+
+    --font-size-s:0.9rem;
+    --font-size-n:1rem;
+    --font-size-m:1.12rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:2.3rem;
+
+
+    /* font weight */
+    --font-weight-normal:400;
+    --font-weight-medium:500;
+    --font-weight-semibold:600;
+    --font-weight-bold:700;
+
+    /* border radius */
+    --border-radius-s:8px;
+    --border-radius-m:30px;
+    --border-radius-circle:50%;
+
+    /* site max width */
+    --side-max-width:1300px;
+
+}
+
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--side-max-width);
+}
+
+/* ===== BASE STYLES ===== */
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background: #f8f7f7;
+  position: relative;
+}
+
+.logo-text{
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  font-size: 23px;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+}
+
+a{
+  text-decoration: none;
+}
+
+/* ===== MENU ===== */
+
+.menu-list{
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.menu-links{
+  color: var(--primary-color);
+  font-size: var(--font-size-m);
+  transition: color 0.3s ease;
+}
+
+.menu-links:hover{
+  color: var(--orange-color);
+}
+
+
+/* ===== ICONS ===== */
+
+.icons{
+  display: flex;
+  gap: 20px;
+}
+
+.icon-wrapper{
+  position: relative;
+  font-size: var(--font-size-m);
+  cursor: pointer;
+}
+
+.icon-wrapper i{
+  color: var(--primary-color);
+}
+
+.cart-count{
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* ===== HAMBURGER ===== */
+
+.menu-bar{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ----------------------------- */
+body {
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* top spacing */
+.payment{
+  padding-top: 100px;
+}
+
+/* white container box */
+.payment-container{
+  background: white;
+  max-width: 650px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* inner content */
+.payment-box{
+  width: 100%;
+}
+
+/* heading */
+.payment-box h3{
+  color:#0b2a4a;
+  margin-bottom:20px;
+  font-size:20px;
+}
+
+/* COD card */
+.payment-card{
+  border:1px solid #e5e5e5;
+  border-radius:10px;
+  padding:18px;
+  background:#f9fafc;
+  margin-bottom:25px;
+}
+
+/* radio + title */
+.payment-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+  color:#0b2a4a;
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+/* description */
+.payment-desc{
+  font-size:14px;
+  color:#555;
+  margin-bottom:12px;
+}
+
+/* delivery note */
+.delivery-note{
+  background:#fff3e0;
+  padding:8px 12px;
+  border-radius:6px;
+  font-size:13px;
+  color:#ff7a00;
+  width:fit-content;
+}
+
+/* place order button */
+.place-order-btn{
+  width:100%;
+  padding:14px;
+  background:#ff7a00;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* button hover */
+.place-order-btn:hover{
+  background:#e96d00;
+}
+
+
+/* ===========================
+   TABLET RESPONSIVE
+=========================== */
+
+@media (min-width:577px) and (max-width:991px){
+
+/* NAVBAR */
+
+nav{
+  justify-content:space-between;
+  padding:10px 18px;
+}
+
+.menu-list{
+  gap:20px;
+}
+
+.menu-links{
+  font-size:14px;
+}
+
+.icons{
+  gap:16px;
+}
+
+/* PAYMENT */
+
+.payment{
+  padding-top:70px;
+}
+
+.payment-container{
+  max-width:90%;
+  padding:25px;
+}
+
+.payment-box h3{
+  font-size:19px;
+}
+
+.payment-card{
+  padding:16px;
+}
+
+.payment-header{
+  font-size:15px;
+}
+
+.payment-desc{
+  font-size:13px;
+}
+
+.place-order-btn{
+  padding:13px;
+  font-size:15px;
+}
+
+}
+
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width:576px){
+
+/* NAVBAR */
+
+nav{
+  padding:10px 15px;
+}
+
+.logo{
+  font-size:20px;
+}
+
+.menu-bar{
+  display:block;
+}
+
+.menu-list{
+  position:absolute;
+  top:40px;
+  left:0;
+  width:100%;
+  background:#f8f7f7;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  padding:20px 0;
+  display:none;
+  z-index:1000;
+}
+
+.menu-list.showmenu{
+  display:flex;
+}
+
+.menu-links{
+  font-size:15px;
+}
+
+.icons{
+  gap:14px;
+}
+
+/* PAYMENT */
+
+.payment{
+  padding-top:40px;
+}
+
+.payment-container{
+  max-width:95%;
+  padding:20px;
+  border-radius:10px;
+}
+
+.payment-box h3{
+  font-size:18px;
+}
+
+.payment-card{
+  padding:14px;
+}
+
+.payment-header{
+  font-size:14px;
+}
+
+.payment-desc{
+  font-size:13px;
+}
+
+.delivery-note{
+  font-size:12px;
+  padding:7px 10px;
+}
+
+.place-order-btn{
+  padding:12px;
+  font-size:15px;
+}
+
+}

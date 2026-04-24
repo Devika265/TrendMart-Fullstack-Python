@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>About Us</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <nav>
+
+            <div class="logo-text">
+                <a href="../../home/html/index.html" class="logo">Trend<span style="color: #ff6b00">Mart</span> </a>
+            </div>
+
+            <ul class="menu-list">
+
+                <li><a href="../../home/html/index.html" class="menu-links">Home</a></li>
+                <li><a href="../../about/html/about.html" class="menu-links">About</a></li>
+                <li><a href="../../shop/html/shop.html" class="menu-links">Shop</a></li>
+                <li><a href="../../contact/html/contact.html" class="menu-links">Contact</a></li>
+
+            </ul>
+
+
+            <div class="icons">
+
+                <div class="icon-wrapper" id="myorders-icon">
+                    <a href="../../myorders/html/myorders.html"><i class="fa-solid fa-box"></i></a>
+                </div>
+
+                <div class="icon-wrapper" id="wish-icon">
+                    <a href="../../wishlist/html/wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                    <span class="cart-count">3</span>
+                </div>
+
+                <div class="icon-wrapper" id="cart-icon">
+                    <a href="../../cart/html/shoppingCart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+
+
+                <div class="icon-wrapper" id="profile-icon">
+                    <a href="../../login/html/login.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+
+                <div class="icon-wrapper" id="logout-icon">
+                    <a href="#" onclick="handleLogout()"><i class="fa-solid fa-power-off"
+                            style="color: #ff4d4d;"></i></a>
+                </div>
+
+            </div>
+
+            <button class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- about-banner-section -->
+        <section class="hero-unique">
+            <div class="hero-container">
+                <div class="hero-text-box">
+                    <span class="eyebrow">Exclusively Crafted</span>
+                    <h1>Style That <br><span>Speaks Volume</span></h1>
+                    <p>Don't just shop. Discover a curated collection that reflects your unique personality and
+                        lifestyle.</p>
+                    <div class="btn-group">
+                        <a href="../../shop/html/shop.html" class="main-btn">Shop Collection</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-gallery">
+                    <div class="img-wrapper main-img">
+                        <img id="hero-main" class="hero-gallery-img" src="" alt="Main Product">
+                    </div>
+                    <div class="img-wrapper sub-img-1">
+                        <img id="hero-sub-1" class="hero-gallery-img" src="" alt="Sub Product 1">
+                    </div>
+                    <div class="img-wrapper sub-img-2">
+                        <img id="hero-sub-2" class="hero-gallery-img" src="" alt="Sub Product 2">
+                    </div>
+                    <div class="bg-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- why choose us -->
+
+        <section class="overview section-content">
+            <div class="overview-container">
+                <div class="overview-details">
+                    <h2 class="title">Why Choose Us</h2>
+                    <p class="text">Explore a smart shopping experience with TrendMart, where quality, trust, and
+                        customer satisfaction come first.</p>
+                </div>
+
+                <div class="overview-part">
+                    <div class="parts">
+                        <i class="fa-solid fa-gem icons"></i>
+                        <h3 class="subtitle">High Quality Products</h3>
+                        <p>TrendMart offers carefully selected products that meet high standards of quality and
+                            durability.</p>
+                    </div>
+
+                    <div class="parts">
+                        <i class="fa-solid fa-fire icons"></i>
+                        <h3 class="subtitle">Latest Trends</h3>
+                        <p>Stay updated with trending products that match modern lifestyles and customer needs.</p>
+                    </div>
+
+                    <div class="parts">
+                        <i class="fa-solid fa-tags icons"></i>
+                        <h3 class="subtitle">Best Value Prices</h3>
+                        <p>Enjoy competitive pricing with great value, ensuring affordability.</p>
+                    </div>
+
+                    <div class="parts">
+                        <i class="fa-solid fa-lock icons"></i>
+                        <h3 class="subtitle">Secure Payments</h3>
+                        <p>TrendMart supports safe and reliable payment methods for a worry-free shopping experience.
+                        </p>
+                    </div>
+
+                    <div class="parts">
+                        <i class="fa-solid fa-truck icons"></i>
+                        <h3 class="subtitle">Easy Order Tracking</h3>
+                        <p>Track your orders in real time and stay informed from purchase to delivery.</p>
+                    </div>
+
+                    <div class="parts">
+                        <i class="fa-solid fa-face-smile icons"></i>
+                        <h3 class="subtitle">100% Customer Satisfaction</h3>
+                        <p>Customer happiness is our priority, with responsive support and smooth service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- milestones -->
+
+        <section class="milestones">
+            <div class="milestones-container">
+                <ul class="milestones-list" id="milestones-list">
+                </ul>
+            </div>
+        </section>
+
+        <!-- what can you buy from trenmart section -->
+
+        <section class="trendmart-section section-content">
+
+            <div class="gallery-container" id="trendProductsContainer"></div>
+
+        </section>
+
+    </main>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter section-content">
+            <div class="newsletter">
+                <h1 class="text">Sign up to Newsletter</h1>
+
+                <h2>And receive ₹500 coupon for your first shopping</h2>
+                <div class="mail">
+                    <input type="email" placeholder="Enter your email" class="news-box" id="userEmail">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Footer Main Content -->
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>TREND-MART</h3>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-phone"></i> +91 82485 20144</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope"></i> supportTrendMart@gmail.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-location-dot"></i> Madurai - 625106</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-box">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="/frontend/user/about/html/about.html">About Us</a></li>
+                    <li><a href="../../contact/html/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- My Account -->
+            <div class="footer-box">
+                <h3>My Account</h3>
+                <ul>
+                    <li><a href="../../login/html/login.html">Sign In</a></li>
+                    <li><a href="../../wishlist/html/wishlist.html">My Wishlist</a></li>
+                    <li><a href="../../myorders/html/myorders.html">Track My Order</a></li>
+
+                </ul>
+            </div>
+
+            <!-- contact -->
+
+                <div class="footer-box">
+                    <h3 class="social-media-title">Connect</h3>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-square-instagram social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter social-icon-list"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube social-icon-list"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p id="para">© 2026 Trent-Mart. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="../../about/js/about.js"></script>
+    <script src="../../login/js/login.js"></script>
+
+    <script>
+        const menuBar = document.querySelector(".menu-bar");
+        const menuList = document.querySelector("nav ul");
+
+        menuBar.addEventListener("click", () => {
+            menuList.classList.toggle("showmenu");
+        });
+
+    </script>
+</body>
+
+</html>

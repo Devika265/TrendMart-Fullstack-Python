@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Skin Cream",
+        "category": "Cosmetics",
+        "offer": "35% offer",
+        "price": 228,
+        "oldPrice": 299,
+        "rating": 5,
+        "image":"bluetooth.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Shoe",
+        "category": "Kids Things",
+        "offer": "20% offer",
+        "price": 699,
+        "oldPrice": 800,
+        "rating": 4,
+        "image": "shoe.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Ball",
+        "category": "Cloths",
+        "offer": "50% offer",
+        "price": 1050,
+        "oldPrice": 1650,
+        "rating": 4,
+        "image": "ball.jpg"
+    },
+    {
+        "id": 4,
+        "name": "T-Shirt",
+        "category": "Cloths",
+        "offer": "35% offer",
+        "price": 399,
+        "oldPrice":599,
+        "rating": 4,
+        "image": "t-shirt.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Bag",
+        "category": "Kids Things",
+        "offer": "25% offer",
+        "price":2000,
+        "oldPrice":2500,
+        "rating": 4,
+        "image": "school-bag.jpg"
+    },
+    {
+        "id": 6,
+        "name": "slipper",
+        "category": "Kids Things",
+        "offer": "10% offer",
+        "price":299,
+        "oldPrice":399,
+        "rating": 4,
+        "image": "slippers.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Teddy",
+        "category": "Cosmatics",
+        "offer": "20% offer",
+        "price":999,
+        "oldPrice":1299,
+        "rating": 4,
+        "image": "teddy.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Stylish T-shirt",
+        "category": "Cloths",
+        "offer": "20% offer",
+        "price":3000,
+        "oldPrice":3750,
+        "rating": 4,
+        "image": "t-shirt2.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Water Bottle",
+        "category": "Electronic Devices",
+        "offer": "30% offer",
+        "price":699,
+        "oldPrice":899,
+        "rating": 4,
+        "image": "water-bottle.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Umberlla",
+        "category": "Home Applainces",
+        "offer": "15% offer",
+        "price":350,
+        "oldPrice":390,
+        "rating": 4,
+        "image":"umberlla.jpg"
+    }
+]
