@@ -7,7 +7,7 @@ const rowsPerPage = 8;
 // ===========================
 async function loadSubscribers() {
     try {
-        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/subscribers/");
+        const response = await fetch("http://127.0.0.1:8000/api/subscribers/");
         allSubscribers = await response.json();
         displayPage(1);
     } catch (error) {
@@ -89,7 +89,7 @@ async function deleteSubscriber(email) {
 
     try {
         const response = await fetch(
-            `https://trendmart-backend-3o66.onrender.com/api/subscribers/${email}`,
+            `http://127.0.0.1:8000/api/subscribers/${email}`,
             { method: "DELETE" }
         );
 

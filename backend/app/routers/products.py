@@ -62,9 +62,9 @@ def create_product(product: ProductCreate):
     try:
         off_price = product.original_price * (1 - (product.offer / 100)) if product.offer else product.original_price
         sql = """INSERT INTO products 
-                 (product_code, category, name, offer, offer_type, original_price, 
-                  offer_price, stock, rating, image_url, description) 
-                 VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
+                (product_code, category, name, offer, offer_type, original_price, 
+                offer_price, stock, rating, image_url, description) 
+                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
         cursor.execute(sql, (new_code, product.category, product.name, product.offer, 
                             product.offer_type, product.original_price, off_price, 
                             product.stock, product.rating, product.image_url, product.description))
@@ -82,8 +82,8 @@ def update_product(id: int, product: ProductCreate):
     try:
         off_price = product.original_price * (1 - (product.offer / 100)) if product.offer else product.original_price
         sql = """UPDATE products SET category=%s, name=%s, offer=%s, offer_type=%s, 
-                 original_price=%s, offer_price=%s, stock=%s, rating=%s, 
-                 image_url=%s, description=%s WHERE id=%s"""
+                original_price=%s, offer_price=%s, stock=%s, rating=%s, 
+                image_url=%s, description=%s WHERE id=%s"""
         cursor.execute(sql, (product.category, product.name, product.offer, product.offer_type, 
                             product.original_price, off_price, product.stock, 
                             product.rating, product.image_url, product.description, id))

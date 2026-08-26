@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const offerType = urlParams.get("offer");
 
-    let url = "https://trendmart-backend-3o66.onrender.com/api/products/";
+    let url = "http://127.0.0.1:8000/api/products/";
     if (offerType) {
-        url = "https://trendmart-backend-3o66.onrender.com/api/products/filter/offer/?offer=" + offerType;
+        url = "http://127.0.0.1:8000/api/products/filter/offer/?offer=" + offerType;
     }
 
     applyFilter(url);
@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const searchText = this.value.trim();
 
-            let searchUrl = "https://trendmart-backend-3o66.onrender.com/api/products/";
+            let searchUrl = "http://127.0.0.1:8000/api/products/";
 
             if (searchText !== "") {
-                searchUrl = `https://trendmart-backend-3o66.onrender.com/api/products/search/?q=${encodeURIComponent(searchText)}`;
+                searchUrl = `http://127.0.0.1:8000/api/products/search/?q=${encodeURIComponent(searchText)}`;
             }
 
             applyFilter(searchUrl);
@@ -71,8 +71,8 @@ function filterCategory() {
     let categories = Array.from(checked).map(cb => cb.value);
 
     let url = categories.length === 0
-        ? "https://trendmart-backend-3o66.onrender.com/api/products/"
-        : `https://trendmart-backend-3o66.onrender.com/api/products/filter/category/?category=${categories.join(",")}`;
+        ? "http://127.0.0.1:8000/api/products/"
+        : `http://127.0.0.1:8000/api/products/filter/category/?category=${categories.join(",")}`;
 
     applyFilter(url);
 }
@@ -84,7 +84,7 @@ function filterPrice() {
 
     const maxPrice = document.getElementById("max-price").value || 100000;
 
-    let url = `https://trendmart-backend-3o66.onrender.com/api/products/filter/price/?min_price=${minPrice}&max_price=${maxPrice}`;
+    let url = `http://127.0.0.1:8000/api/products/filter/price/?min_price=${minPrice}&max_price=${maxPrice}`;
 
     applyFilter(url);
 }
@@ -97,8 +97,8 @@ function filterDiscount() {
     let discounts = Array.from(checked).map(cb => cb.value);
 
     let url = discounts.length > 0
-        ? `https://trendmart-backend-3o66.onrender.com/api/products/filter/discount/?discount=${discounts.join(",")}`
-        : "https://trendmart-backend-3o66.onrender.com/api/products/";
+        ? `http://127.0.0.1:8000/api/products/filter/discount/?discount=${discounts.join(",")}`
+        : "http://127.0.0.1:8000/api/products/";
 
     applyFilter(url);
 }
@@ -111,8 +111,8 @@ function filterRating() {
     let ratings = Array.from(checked).map(cb => cb.value);
 
     let url = ratings.length > 0
-        ? `https://trendmart-backend-3o66.onrender.com/api/products/filter/rating/?rating=${ratings.join(",")}`
-        : "https://trendmart-backend-3o66.onrender.com/api/products/";
+        ? `http://127.0.0.1:8000/api/products/filter/rating/?rating=${ratings.join(",")}`
+        : "http://127.0.0.1:8000/api/products/";
 
     applyFilter(url);
 }
@@ -125,8 +125,8 @@ function filterOffer() {
     let offers = Array.from(checked).map(cb => cb.value);
 
     let url = offers.length > 0
-        ? `https://trendmart-backend-3o66.onrender.com/api/products/filter/offer/?offer=${offers.join(",")}`
-        : "https://trendmart-backend-3o66.onrender.com/api/products/";
+        ? `http://127.0.0.1:8000/api/products/filter/offer/?offer=${offers.join(",")}`
+        : "http://127.0.0.1:8000/api/products/";
 
     applyFilter(url);
 }

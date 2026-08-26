@@ -76,7 +76,7 @@ async function subscribe() {
     const formData = new FormData();
     formData.append("email", email);
 
-    const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/subscribers/", {
+    const response = await fetch("http://127.0.0.1:8000/api/subscribers/", {
         method: "POST",
         body: formData
     });
