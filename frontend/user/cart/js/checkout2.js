@@ -49,7 +49,7 @@ async function placeOrder() {
 
     if (!loggedInUserId) {
         alert("Please login to place an order!");
-        window.location.href = "../../user/login/html/login.html";
+        window.location.href = "../../user/login/login.html";
         return;
     }
 
