@@ -40,13 +40,14 @@ async function placeOrder() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const addressData = JSON.parse(sessionStorage.getItem("checkoutAddress")) || {};
 
-    // 1. Safe User ID Check (checks all common keys)
-    let loggedInUserId = localStorage.getItem('userId') || localStorage.getItem('user_id');
+    // 1. Check all possible login keys (username, userId, role, or user object)
+    let loggedInUserId = localStorage.getItem('userId') || localStorage.getItem('user_id') || localStorage.getItem('username');
     if (!loggedInUserId) {
         const userObj = JSON.parse(localStorage.getItem('user') || '{}');
-        loggedInUserId = userObj.id || userObj.user_id || userObj.userId;
+        loggedInUserId = userObj.id || userObj.user_id || userObj.userId || userObj.username;
     }
 
+    // Still not logged in
     if (!loggedInUserId) {
         alert("Please login to place an order!");
         window.location.href = "../../login/html/login.html";
@@ -86,7 +87,7 @@ async function placeOrder() {
     // PAYLOAD MAPPING
     const payload = {
         user_id: String(loggedInUserId), 
-        customer_name: String(addressData.name || "Customer"),
+        customer_name: String(addressData.name || localStorage.getItem('username') || "Customer"),
         phone: String(addressData.phone || "0000000000"),
         address: `${addressData.address || "Address"}, ${addressData.city || ""} - ${addressData.pincode || ""}`,
         subtotal: subtotalValue,
@@ -98,7 +99,7 @@ async function placeOrder() {
 
     console.log("Sending Payload for User:", payload.user_id);
 
-    // Live Render Backend URL (or fallback to localhost if developing locally)
+    // Live Render Backend URL
     const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
         ? "http://127.0.0.1:8000"
         : "https://trendmart-backend-3o66.onrender.com";
