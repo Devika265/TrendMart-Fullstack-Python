@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           
           if (data.role === "admin") {
-            window.location.href = "/frontend/admin/dashboard/dashboard.html";
+            window.location.href = "../../admin/dashboard/dashboard.html";
           } else {
             window.location.href = "../../home/html/index.html";
           }
