@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await fetch(`https://trendmart-backend-3o66.onrender.com/api/orders/${orderId}`);
+        const response = await fetch(`http://127.0.0.1:8000/api/orders/${orderId}`);
         const data = await response.json();
 
         if (!response.ok) {

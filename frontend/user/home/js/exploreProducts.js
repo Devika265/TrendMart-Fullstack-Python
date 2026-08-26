@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
      updateHeaderBadge(); 
 
     
-    fetch("https://trendmart-backend-3o66.onrender.com/api/products/")
+    fetch("http://127.0.0.1:8000/api/products/")
         .then((res) => res.json())
         .then((products) => {
             if (!container) return;
@@ -90,7 +90,7 @@ async function subscribe() {
     const formData = new FormData();
     formData.append("email", email);
 
-    const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/subscribers/", {
+    const response = await fetch("http://127.0.0.1:8000/api/subscribers/", {
         method: "POST",
         body: formData
     });

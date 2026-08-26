@@ -7,7 +7,7 @@ async function loadOffers() {
 
     try {
 
-        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/offers");
+        const response = await fetch("http://127.0.0.1:8000/api/offers");
         offers = await response.json();
 
         if (offers.length > 0) {

@@ -34,7 +34,7 @@ if (contactForm) {
         };
 
         try {
-            const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/contact/", {
+            const response = await fetch("http://127.0.0.1:8000/api/contact/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
@@ -64,7 +64,7 @@ async function subscribe() {
     formData.append("email", emailInput.value);
 
     try {
-        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/subscribers/", {
+        const response = await fetch("http://127.0.0.1:8000/api/subscribers/", {
             method: "POST",
             body: formData
         });
@@ -80,7 +80,7 @@ async function subscribe() {
 
 async function initHeroSlider() {
     try {
-        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/products/new-arrivals/");
+        const response = await fetch("http://127.0.0.1:8000/api/products/new-arrivals/");
         allProductsForSlider = await response.json();
 
         if (allProductsForSlider.length >= 3) {
@@ -125,7 +125,7 @@ async function loadMilestones() {
     if (!listContainer) return;
 
     try {
-        const response = await fetch('https://trendmart-backend-3o66.onrender.com/api/milestones');
+        const response = await fetch('http://127.0.0.1:8000/api/milestones');
         const data = await response.json();
 
         listContainer.innerHTML = '';

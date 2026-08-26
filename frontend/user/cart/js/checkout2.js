@@ -40,16 +40,37 @@ async function placeOrder() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const addressData = JSON.parse(sessionStorage.getItem("checkoutAddress")) || {};
 
+<<<<<<< HEAD
+    // 1. Check all possible login keys (username, userId, role, or user object)
+    let loggedInUserId = localStorage.getItem('userId') || localStorage.getItem('user_id') || localStorage.getItem('username');
+    if (!loggedInUserId) {
+        const userObj = JSON.parse(localStorage.getItem('user') || '{}');
+        loggedInUserId = userObj.id || userObj.user_id || userObj.userId || userObj.username;
+=======
+<<<<<<< HEAD
     // Check User ID
+=======
+    // 1. Safe User ID Check (checks all common keys)
+>>>>>>> ce31b85 (Fix login redirect path)
     let loggedInUserId = localStorage.getItem('userId') || localStorage.getItem('user_id');
     if (!loggedInUserId) {
         const userObj = JSON.parse(localStorage.getItem('user') || '{}');
         loggedInUserId = userObj.id || userObj.user_id || userObj.userId;
+>>>>>>> 535eec0
     }
 
+    // Still not logged in
     if (!loggedInUserId) {
         alert("Please login to place an order!");
+<<<<<<< HEAD
+        window.location.href = "../../login/html/login.html";
+=======
+<<<<<<< HEAD
         window.location.href = "../../user/login/login.html";
+=======
+        window.location.href = "../../login/html/login.html";
+>>>>>>> ce31b85 (Fix login redirect path)
+>>>>>>> 535eec0
         return;
     }
 
@@ -86,7 +107,11 @@ async function placeOrder() {
     // PAYLOAD MAPPING
     const payload = {
         user_id: String(loggedInUserId), 
+<<<<<<< HEAD
+        customer_name: String(addressData.name || localStorage.getItem('username') || "Customer"),
+=======
         customer_name: String(addressData.name || "Customer"),
+>>>>>>> 535eec0
         phone: String(addressData.phone || "0000000000"),
         address: `${addressData.address || "Address"}, ${addressData.city || ""} - ${addressData.pincode || ""}`,
         subtotal: subtotalValue,
@@ -96,6 +121,16 @@ async function placeOrder() {
         items: items
     };
 
+    const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:8000"
+        : "https://trendmart-backend-3o66.onrender.com";
+
+    // Live Render Backend URL (or fallback to localhost if developing locally)
+    const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:8000"
+        : "https://trendmart-backend-3o66.onrender.com";
+
+    // Live Render Backend URL
     const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
         ? "http://127.0.0.1:8000"
         : "https://trendmart-backend-3o66.onrender.com";

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             try {
-                const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/contact/feedback", {
+                const response = await fetch("http://127.0.0.1:8000/api/contact/feedback", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(formData)
@@ -66,7 +66,7 @@ async function loadDynamicFeedbacks(pId) {
 
     try {
         // Specific product ID-ku reviews ketkurom
-        const response = await fetch(`https://trendmart-backend-3o66.onrender.com/api/contact/feedback?product_id=${pId}`);
+        const response = await fetch(`http://127.0.0.1:8000/api/contact/feedback?product_id=${pId}`);
         const feedbacks = await response.json();
 
         if (feedbacks.length === 0) {
