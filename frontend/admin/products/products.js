@@ -1,7 +1,7 @@
 let allProducts = [];
 let currentPage = 1;
 const itemsPerPage = 8;
-const API_URL = "https://trendmart-backend-3o66.onrender.com/api/products/";
+const API_URL = "http://127.0.0.1:8000/api/products/";
 
 const modal = document.getElementById("productModal");
 const productForm = document.getElementById("productForm");

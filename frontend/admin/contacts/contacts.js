@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const API_URL = "https://trendmart-backend-3o66.onrender.com/api/contact/";
+    const API_URL = "http://127.0.0.1:8000/api/contact/";
     let allContacts = [];
     let currentPage = 1;
     const rowsPerPage = 8; 

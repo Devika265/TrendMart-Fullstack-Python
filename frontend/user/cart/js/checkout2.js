@@ -40,7 +40,11 @@ async function placeOrder() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const addressData = JSON.parse(sessionStorage.getItem("checkoutAddress")) || {};
 
+<<<<<<< HEAD
     // Check User ID
+=======
+    // 1. Safe User ID Check (checks all common keys)
+>>>>>>> ce31b85 (Fix login redirect path)
     let loggedInUserId = localStorage.getItem('userId') || localStorage.getItem('user_id');
     if (!loggedInUserId) {
         const userObj = JSON.parse(localStorage.getItem('user') || '{}');
@@ -49,7 +53,11 @@ async function placeOrder() {
 
     if (!loggedInUserId) {
         alert("Please login to place an order!");
+<<<<<<< HEAD
         window.location.href = "../../user/login/login.html";
+=======
+        window.location.href = "../../login/html/login.html";
+>>>>>>> ce31b85 (Fix login redirect path)
         return;
     }
 
@@ -96,6 +104,11 @@ async function placeOrder() {
         items: items
     };
 
+    const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:8000"
+        : "https://trendmart-backend-3o66.onrender.com";
+
+    // Live Render Backend URL (or fallback to localhost if developing locally)
     const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
         ? "http://127.0.0.1:8000"
         : "https://trendmart-backend-3o66.onrender.com";
