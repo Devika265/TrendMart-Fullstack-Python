@@ -1,5 +1,5 @@
 const PasswordReset = {
-    API_URL: 'http://127.0.0.1:8000/api/auth/forgot-password',
+    API_URL: 'https://trendmart-backend-3o66.onrender.com/api/auth/forgot-password',
 
     init() {
         this.form = document.getElementById('forgotPasswordForm');

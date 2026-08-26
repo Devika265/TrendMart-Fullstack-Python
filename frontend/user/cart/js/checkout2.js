@@ -95,7 +95,7 @@ async function placeOrder() {
     console.log("Sending Payload for User:", payload.user_id);
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/orders/", {
+        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/orders/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)

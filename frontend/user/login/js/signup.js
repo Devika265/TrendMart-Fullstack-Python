@@ -1,6 +1,6 @@
 const UserAuth = {
     
-    API_URL: 'http://127.0.0.1:8000/api/auth/register',
+    API_URL: 'https://trendmart-backend-3o66.onrender.com/api/auth/register',
     HOME_PAGE: '../../home/html/index.html',
 
     init() {

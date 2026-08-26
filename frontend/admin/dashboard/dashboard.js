@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://trendmart-backend-3o66.onrender.com";
 let salesChart, statusChart, productsChart;
 
 async function initDashboard() {

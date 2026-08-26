@@ -38,7 +38,7 @@ async function loadMyOrders(userId) {
     if (!wrapper) return;
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/orders/my-orders/${userId}`);
+        const response = await fetch(`https://trendmart-backend-3o66.onrender.com/api/orders/my-orders/${userId}`);
         if (!response.ok) {
             wrapper.innerHTML = `<p class="error-msg">Server error. Please try again later.</p>`;
             return;

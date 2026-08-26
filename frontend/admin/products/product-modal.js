@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // FETCH
     async function fetchProducts() {
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/products/");
+            const res = await fetch("https://trendmart-backend-3o66.onrender.com/api/products/");
             allProducts = await res.json();
             rend
             erTable(currentPage, allProducts);
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.deleteProduct = async (id) => {
         if (confirm("Delete?")) {
-            await fetch(`http://127.0.0.1:8000/api/products/${id}/`, { method: "DELETE" });
+            await fetch(`https://trendmart-backend-3o66.onrender.com/api/products/${id}/`, { method: "DELETE" });
             fetchProducts();
         }
     };
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             rating: Number(document.getElementById("rating").value)
         };
         const method = id ? "PUT" : "POST";
-        const url = id ? `http://127.0.0.1:8000/api/products/${id}/` : "http://127.0.0.1:8000/api/products/";
+        const url = id ? `https://trendmart-backend-3o66.onrender.com/api/products/${id}/` : "https://trendmart-backend-3o66.onrender.com/api/products/";
         
         await fetch(url, {
             method: method,

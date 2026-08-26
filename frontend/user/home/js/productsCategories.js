@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
 
-        const response = await fetch("http://127.0.0.1:8000/api/products/");
+        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/products/");
         const products = await response.json();
 
         const categoryMap = {};
