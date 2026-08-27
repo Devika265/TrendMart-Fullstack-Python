@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-const BASE_URL = "https://trendmart-backend-3o66.onrender.com";
-=======
-// Dynamic Backend URL for Localhost & Live Render
-const BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "https://trendmart-backend-3o66.onrender.com"
-    : "https://trendmart-backend-3o66.onrender.com";
+// GLOBAL BASE API URL
+window.BASE_API_URL = window.BASE_API_URL || "https://trendmart-backend-3o66.onrender.com";
 
->>>>>>> 535eec0
 let salesChart, statusChart, productsChart;
 
 async function initDashboard() {
     try {
         const [cardsRes, chartRes, ordersRes] = await Promise.all([
-            fetch(`${BASE_URL}/api/dashboard/cards`),
-            fetch(`${BASE_URL}/api/dashboard/chart`),
-            fetch(`${BASE_URL}/api/dashboard/orders`)
+            fetch(`${window.BASE_API_URL}/api/dashboard/cards`),
+            fetch(`${window.BASE_API_URL}/api/dashboard/chart`),
+            fetch(`${window.BASE_API_URL}/api/dashboard/orders`)
         ]);
 
         const statsData = await cardsRes.json();
