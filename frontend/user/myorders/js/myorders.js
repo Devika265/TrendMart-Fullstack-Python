@@ -1,5 +1,5 @@
 // GLOBAL BASE API URL
-const BASE_API_URL = "https://trendmart-backend-3o66.onrender.com";
+window.BASE_API_URL = window.BASE_API_URL || "https://trendmart-backend-3o66.onrender.com";
 
 document.addEventListener('DOMContentLoaded', () => {
     updateHeaderBadge();
@@ -40,7 +40,7 @@ async function loadMyOrders(userId) {
     if (!wrapper) return;
 
     try {
-        const response = await fetch(`${BASE_API_URL}/api/orders/my-orders/${userId}`);
+        const response = await fetch(`${window.BASE_API_URL}/api/orders/my-orders/${userId}`);
         if (!response.ok) {
             wrapper.innerHTML = `<p class="error-msg">Server error. Please try again later.</p>`;
             return;
