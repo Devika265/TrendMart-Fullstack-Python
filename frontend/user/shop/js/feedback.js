@@ -1,4 +1,4 @@
-// 1. URL-la irunthu Product ID-a edukkalaam
+
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 

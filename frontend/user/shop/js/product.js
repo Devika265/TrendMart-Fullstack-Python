@@ -1,3 +1,6 @@
+// GLOBAL BASE API URL
+const BASE_API_URL = "https://trendmart-backend-3o66.onrender.com";
+
 let currentProduct = null;
 let allProducts = [];
 let currentPage = 1;
@@ -30,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // --------- LOAD MAIN PRODUCT ---------
     if (productId) {
         try {
-            const response = await fetch(`http://127.0.0.1:8000/api/products/${productId}/`);
+            const response = await fetch(`${BASE_API_URL}/api/products/${productId}/`);
             const product = await response.json();
 
             if (product) {
@@ -81,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             try {
 
-                const response = await fetch("http://127.0.0.1:8000/api/feedback", {
+                const response = await fetch(`${BASE_API_URL}/api/feedback`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -118,8 +121,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const query = this.value.trim();
 
             let searchUrl = query
-                ? `http://127.0.0.1:8000/api/products/search/query/?q=${encodeURIComponent(query)}`
-                : "http://127.0.0.1:8000/api/products/";
+                ? `${BASE_API_URL}/api/products/search/query/?q=${encodeURIComponent(query)}`
+                : `${BASE_API_URL}/api/products/`;
 
             try {
 
@@ -140,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // --------- LOAD ALL PRODUCTS ---------
     try {
 
-        const response = await fetch("http://127.0.0.1:8000/api/products/");
+        const response = await fetch(`${BASE_API_URL}/api/products/`);
 
         allProducts = await response.json();
 
@@ -166,7 +169,7 @@ async function loadDynamicFeedbacks(pId) {
 
     try {
 
-        const response = await fetch(`http://127.0.0.1:8000/api/feedback?product_id=${pId}`);
+        const response = await fetch(`${BASE_API_URL}/api/feedback?product_id=${pId}`);
 
         const feedbacks = await response.json();
 
@@ -212,7 +215,7 @@ async function loadRelatedProducts(category, currentId) {
 
     try {
 
-        const res = await fetch(`http://127.0.0.1:8000/api/products/`);
+        const res = await fetch(`${BASE_API_URL}/api/products/`);
 
         const data = await res.json();
 
