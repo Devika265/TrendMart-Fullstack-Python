@@ -1,3 +1,6 @@
+// GLOBAL BASE API URL
+const BASE_API_URL = "https://trendmart-backend-3o66.onrender.com";
+
 document.addEventListener('DOMContentLoaded', () => {
     updateHeaderBadge();
     const loggedInUserId = localStorage.getItem('userId'); 
@@ -7,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         const wrapper = document.getElementById('orders-wrapper');
         if (wrapper) {
-            
             wrapper.innerHTML = `
                 <div class="login-prompt-container">
                     <p>Please <a href="../../login/html/login.html" class="login-link">Login</a> to view your orders.</p>
@@ -38,7 +40,7 @@ async function loadMyOrders(userId) {
     if (!wrapper) return;
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/orders/my-orders/${userId}`);
+        const response = await fetch(`${BASE_API_URL}/api/orders/my-orders/${userId}`);
         if (!response.ok) {
             wrapper.innerHTML = `<p class="error-msg">Server error. Please try again later.</p>`;
             return;
@@ -80,7 +82,6 @@ async function loadMyOrders(userId) {
                 </div>
             `).join('');
 
-            
             const namesHTML = group.items.map(item => `
                 <div class="order-item-row">
                     <span class="item-name">${item.name} <b class="item-qty">x${item.qty}</b></span>
@@ -88,7 +89,6 @@ async function loadMyOrders(userId) {
                 </div>
             `).join('');
 
-            
             const orderCard = `
                 <div class="product-details-card" data-status="${statusClass}">
                     
