@@ -122,17 +122,17 @@ async function placeOrder() {
     };
 
     const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-        ? "http://127.0.0.1:8000"
+        ? "https://trendmart-backend-3o66.onrender.com"
         : "https://trendmart-backend-3o66.onrender.com";
 
     // Live Render Backend URL (or fallback to localhost if developing locally)
     const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-        ? "http://127.0.0.1:8000"
+        ? "https://trendmart-backend-3o66.onrender.com"
         : "https://trendmart-backend-3o66.onrender.com";
 
     // Live Render Backend URL
     const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-        ? "http://127.0.0.1:8000"
+        ? "https://trendmart-backend-3o66.onrender.com"
         : "https://trendmart-backend-3o66.onrender.com";
 
     try {

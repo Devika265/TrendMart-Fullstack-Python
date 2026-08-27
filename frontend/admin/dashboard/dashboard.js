@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://trendmart-backend-3o66.onrender.com";
 =======
 // Dynamic Backend URL for Localhost & Live Render
 const BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "http://127.0.0.1:8000"
+    ? "https://trendmart-backend-3o66.onrender.com"
     : "https://trendmart-backend-3o66.onrender.com";
 
 >>>>>>> 535eec0

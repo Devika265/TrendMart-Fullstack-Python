@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/orders";
+const API_URL = "https://trendmart-backend-3o66.onrender.com/api/orders";
 let allOrders = []; 
 let filteredOrders = []; 
 let currentPage = 1;
