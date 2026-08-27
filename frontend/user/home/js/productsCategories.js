@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
 
-        const response = await fetch("http://127.0.0.1:8000/api/products/");
+        const response = await fetch("https://trendmart-backend-3o66.onrender.com/api/products/");
         const products = await response.json();
 
         const categoryMap = {};
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         container.innerHTML = "";
 
-        categories.slice(0,6).forEach(category => {
+        categories.slice(0, 6).forEach(category => {
 
             const items = categoryMap[category];
 
@@ -55,6 +55,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 });
-
-
-
