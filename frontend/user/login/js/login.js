@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Login Successful! Welcome " + data.username);
 
                     if (data.role === "admin") {
-                        window.location.href = "../../admin/dashboard/dashboard.html";
+                        window.location.href = "../../../admin/dashboard/dashboard.html";
                     } else {
                         window.location.href = "../../home/html/index.html";
                     }
