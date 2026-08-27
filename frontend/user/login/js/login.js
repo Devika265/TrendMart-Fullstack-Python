@@ -1,5 +1,5 @@
 // GLOBAL BASE API URL
-const BASE_API_URL = "https://trendmart-backend-3o66.onrender.com";
+window.BASE_API_URL = window.BASE_API_URL || "https://trendmart-backend-3o66.onrender.com";
 
 function handleLogout() {
     console.log("Logout triggered");
@@ -8,7 +8,7 @@ function handleLogout() {
         localStorage.clear(); 
         sessionStorage.clear();
         console.log("User session cleared");
-        window.location.href = "../../login/html/login.html";
+        window.location.href = "/user/login/html/login.html";
     }
 }
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 formData.append("username", email);
                 formData.append("password", password);
 
-                const response = await fetch(`${BASE_API_URL}/api/auth/login`, {
+                const response = await fetch(`${window.BASE_API_URL}/api/auth/login`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Login Successful! Welcome " + data.username);
 
                     if (data.role === "admin") {
-                        window.location.href = "../../../admin/dashboard/dashboard.html";
+                        window.location.href = "/admin/dashboard/dashboard.html";
                     } else {
-                        window.location.href = "../../home/html/index.html";
+                        window.location.href = "/user/home/html/index.html";
                     }
                 } else {
                     alert("Login Failed: " + (data.detail || "Invalid credentials"));
