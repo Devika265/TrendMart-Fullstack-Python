@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from app.database import get_db_connection
 
-router = APIRouter(prefix="/api/contact/", tags=["Contacts"])
+router = APIRouter(prefix="/api/contact", tags=["Contacts"])
 
 class ContactCreate(BaseModel):
     name: str
