@@ -1,6 +1,6 @@
 const UserAuth = {
-    
-    API_URL: 'http://127.0.0.1:8000/api/auth/register',
+    // Live Render backend URL
+    API_URL: 'https://trendmart-backend-3o66.onrender.com/api/auth/register',
     HOME_PAGE: '../../home/html/index.html',
 
     init() {
@@ -14,7 +14,6 @@ const UserAuth = {
     },
 
     setupEventListeners() {
-        
         if (this.toggleIcon) {
             this.toggleIcon.addEventListener('click', () => this.handlePasswordToggle());
         }
@@ -25,7 +24,6 @@ const UserAuth = {
     handlePasswordToggle() {
         const isPassword = this.passwordInput.type === 'password';
         this.passwordInput.type = isPassword ? 'text' : 'password';
-        
         
         this.toggleIcon.classList.toggle('fa-eye');
         this.toggleIcon.classList.toggle('fa-eye-slash');
@@ -58,9 +56,7 @@ const UserAuth = {
             const result = await response.json();
 
             if (response.ok) {
-                
                 this.persistSession(result, name);
-                
                 alert("Registration Successful!");
                 
                 setTimeout(() => {
@@ -75,13 +71,10 @@ const UserAuth = {
         }
     },
 
-// save local storage
-
+    // Save local storage
     persistSession(data, fallbackName) {
-        
         localStorage.setItem('role', 'customer');
         localStorage.setItem('username', fallbackName);
-        
         
         if (data.access_token) {
             localStorage.setItem('token', data.access_token);
