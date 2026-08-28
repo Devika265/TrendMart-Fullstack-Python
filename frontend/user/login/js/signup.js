@@ -1,7 +1,7 @@
 const UserAuth = {
-    // Live Render backend URL
     API_URL: 'https://trendmart-backend-3o66.onrender.com/api/auth/register',
-    HOME_PAGE: '../../home/html/index.html',
+    // Absolute path use panrom
+    HOME_PAGE: '/user/home/html/index.html',
 
     init() {
         this.signupForm = document.getElementById('signupForm');
@@ -24,7 +24,6 @@ const UserAuth = {
     handlePasswordToggle() {
         const isPassword = this.passwordInput.type === 'password';
         this.passwordInput.type = isPassword ? 'text' : 'password';
-        
         this.toggleIcon.classList.toggle('fa-eye');
         this.toggleIcon.classList.toggle('fa-eye-slash');
     },
@@ -36,7 +35,6 @@ const UserAuth = {
         const email = document.getElementById('email').value.trim();
         const password = this.passwordInput.value;
 
-        // Validation
         if (!name || !email || !password) {
             alert("All fields are required!");
             return;
@@ -59,24 +57,23 @@ const UserAuth = {
                 this.persistSession(result, name);
                 alert("Registration Successful!");
                 
-                setTimeout(() => {
-                    window.location.href = this.HOME_PAGE;
-                }, 1000);
+                // Direct redirect
+                window.location.assign(this.HOME_PAGE);
             } else {
                 alert(result.detail || "Signup failed.");
             }
 
         } catch (error) {
-            alert("Could not connect to FastAPI server.");
+            console.error("Signup error:", error);
+            alert("Could not connect to server or handle response.");
         }
     },
 
-    // Save local storage
     persistSession(data, fallbackName) {
         localStorage.setItem('role', 'customer');
         localStorage.setItem('username', fallbackName);
         
-        if (data.access_token) {
+        if (data && data.access_token) {
             localStorage.setItem('token', data.access_token);
         }
     }
